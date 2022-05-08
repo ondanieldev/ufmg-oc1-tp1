@@ -1,0 +1,3 @@
+- x10 = começo do array
+- x11 = tamanho do array
+- pode utilizar arrays ou ponteiros

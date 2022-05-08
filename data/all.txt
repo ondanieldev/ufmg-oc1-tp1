@@ -1,0 +1,5 @@
+- Simulador:
+https://venus.kvakil.me/
+
+- Sintaxe ISA do RISC-V uttilizada pelo simulador:
+https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md

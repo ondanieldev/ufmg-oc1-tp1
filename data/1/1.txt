@@ -1,0 +1,6 @@
+- C = Q/V
+- x10 = C
+- x11 = Q
+- x12 = V
+- Calcular a que possui valor 0
+- Caso duas tenham valor 0, retornar 0

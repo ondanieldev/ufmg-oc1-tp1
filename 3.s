@@ -36,12 +36,12 @@ bubble_sort:
   loop1:
     li x6, 0                     # j=0
     loop2:
-      slli x28, x6, 2            # x28 = offset of address=j*4 (shift 2 = 4 bytes = 32bits = word)
+      slli x28, x6, 2            # x28 = address offset = j*4 (shift 2 = 4 bytes = 32bits = word)
       add x28, x10, x28          # x28 = address of array[j]
       lw x29, 0(x28)             # x29 = array[j]
   
       addi x30, x6, 1            # x30 = j+1
-      slli x30, x30, 2           # x30 = offset of address=(j+1)*4
+      slli x30, x30, 2           # x30 = address offset = (j+1)*4
       add x30, x10, x30          # x30 = address of array[j+1]
       lw x31, 0(x30)             # x31 = array[j+1]
 
@@ -55,10 +55,11 @@ bubble_sort:
         sub x31, x11, x5         # aux=n-i
         addi x31, x31, -1        # aux=aux-1
         addi x6, x6, 1           # j=j+1
-        blt x6, x31, loop2       # j<n-i-1 ? loop2
+        blt x6, x31, loop2       # j<aux(j<n-i-1) ? loop2
 
     addi x5, x5, 1               # i=i+1
     blt x5, x11, loop1           # i<size ? loop
 
 end:
   nop
+  
